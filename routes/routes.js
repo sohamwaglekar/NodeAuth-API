@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
-const Order = require('../models/order')
+const order = require('../models/order')
 const bcrypt = require('bcryptjs')
 const cookieParser = require("cookie-parser")
 
@@ -109,9 +109,9 @@ router.post('/getmyorder',async (req, res) => {
         
     }
     console.log(payload)
-    const order = await Order.find(payload)
-    console.log(order)
-    res.send(order)
+    const Order = await order.find(payload)
+    console.log(Order)
+    res.send(Order)
 })
 
 module.exports = router;

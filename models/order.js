@@ -5,7 +5,7 @@ const orderSchema = new mongoose.Schema({
     userid: {
         type: mongoose.Schema.Types.ObjectId,
         refPath: 'userref',
-        required: true
+        // required: true
     },
     userref: {
         type: String
